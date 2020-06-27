@@ -12,4 +12,5 @@ For everybode who wants to reduce their RAM usage. This library can be used in S
 For now library uses:
 
 RAM: 139 Bytes (SSD1306_t struct + FontDef struct + buffer size)
+
 FLASH: 2080 Bytes (1504 instruction bytes + 576 font bytes)
