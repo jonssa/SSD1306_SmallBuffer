@@ -8,7 +8,6 @@
 #include <math.h>
 #include <stdlib.h>
 #include "ssd1306.h"
-#include "main.h"
 
 /* Private functions to write bytes to SSD1306 */
 static void ssd1306_WriteCommand(uint8_t byte);
@@ -16,7 +15,7 @@ static void ssd1306_WriteData(uint8_t* buffer, size_t buffer_size);
 
 /* Private variables*/
 static uint8_t SSD1306_Buffer[SSD1306_PAGE_BUFFER];		//screen buffer
-static SSD1306_t SSD1306;								//screen coordinates structure
+static SSD1306_t SSD1306;					//screen coordinates structure
 
 /**
   * @brief  Send command byte to SSD1306
@@ -25,7 +24,7 @@ static SSD1306_t SSD1306;								//screen coordinates structure
   */
 static void ssd1306_WriteCommand(uint8_t byte)
 {
-	I2C1_Memory_Send(SSD1306_I2C_ADDR, &byte, 0x00, 1, 10);
+	I2C1_Memory_Send(SSD1306_I2C_ADDR, &byte, 0x00, 1, 10);			// put here your own function I2C write fcn
 }
 
 /**
@@ -36,7 +35,7 @@ static void ssd1306_WriteCommand(uint8_t byte)
   */
 static void ssd1306_WriteData(uint8_t *buffer, size_t buffer_size)
 {
-	I2C1_Memory_Send(SSD1306_I2C_ADDR, buffer, 0x40, buffer_size, 10);
+	I2C1_Memory_Send(SSD1306_I2C_ADDR, buffer, 0x40, buffer_size, 10);	// put here your own function I2C write fcn
 }
 
 /**
