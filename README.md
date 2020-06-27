@@ -1,4 +1,4 @@
-# SSD1306_SmallBuffer
+# SSD1306_TinyBuffer
 
 
 
