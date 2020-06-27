@@ -1,5 +1,7 @@
 # SSD1306_SmallBuffer
 
+
+
 # Introduction
 This library was written for STML011K4. Because of it's small RAM memory (2kB) using full buffer for 128x64 or even 128x32 SSD1306. By writing this library buffer size is reduced to SSD1306 one page size (128 bytes).
 
